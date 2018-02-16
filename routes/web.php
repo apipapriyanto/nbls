@@ -20,7 +20,10 @@ Route::get('/tukarpoint', function(){
     return view('tukarpoint');
 });
 
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+
+Route::resource('/timeline', 'StatusResurce');
