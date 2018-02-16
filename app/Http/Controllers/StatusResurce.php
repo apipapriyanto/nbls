@@ -13,7 +13,7 @@ class StatusResurce extends Controller
      */
     public function index()
     {
-       return view('time_line');
+       return view('/nbls.time_line');
     }
 
     /**
@@ -23,7 +23,7 @@ class StatusResurce extends Controller
      */
     public function create(Request $request)
     {
-        
+
     }
 
     /**
@@ -37,15 +37,11 @@ class StatusResurce extends Controller
         
          $status = $request->status;
 
-        if($status == null) {
-            return "Satatus Gak boleh kosong";
-        }
-
         $status = new \App\Status;
         $status->status = $status;
         $status->save();
 
-        return redirect('time_line');
+        return redirect('/nbls.time_line');
     }
 
     /**

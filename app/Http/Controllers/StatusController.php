@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class StatusController extends Controller
 {
     function index () {
-        return view('time_line');
+        return view('/nbls.time_line');
     }
 
     function create (Request $request) {
@@ -23,7 +23,7 @@ class StatusController extends Controller
         $status->status = $status;
         $status->save();
 
-        return redirect('time_line');
+        return redirect('/nbls.time_line');
         
  
     }
